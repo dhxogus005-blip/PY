@@ -143,10 +143,14 @@ print(introduce("성현", age=17, team="코르티스"))
 
 # 4️⃣ 5부터 카운트다운하여 로켓 발사시키기 (재귀함수)
 time.sleep(1)                     # 1초 동안 stop
-
 import time
 
+def countdown(n) :
+    if n == 0 :
+        print("로켓 발사")
+        return 0
+    print(n)
+    time.sleep(1)
+    return countdown(n - 1)
 
-
-
-# countdown(5)                        # ✅ 5 -> 4 -> 3 -> 2 -> 1 -> 로켓 발사
+countdown(5)                    # ✅ 5 -> 4 -> 3 -> 2 -> 1 -> 로켓 발사
